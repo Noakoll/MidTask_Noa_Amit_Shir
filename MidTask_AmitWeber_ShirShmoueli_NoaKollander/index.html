@@ -1,0 +1,339 @@
+﻿<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+  <!-- ===== טעינת פונטים מ-Google Fonts ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <!-- ===== מטא-דאטה בסיסית ===== -->
+  <meta charset="utf-8" />
+  <title>אחת מתשע</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <!-- התאמה למסכים שונים -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== Bootstrap CSS - תשתית עיצוב ===== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ===== קבצי CSS מותאמים אישית ===== -->
+  <link href="styles/reset.css" rel="stylesheet" />
+  <link href="styles/styles.css" rel="stylesheet" />
+
+  <!-- ===== קבצי JavaScript ===== -->
+  <!-- ספריית SCORM לתקשורת עם LMS -->
+  <script src="SCORM_API_wrapper.js"></script>
+  <!-- קובץ ה-JS הראשי שלנו -->
+  <script src="javascript.js"></script>
+</head>
+
+<body>
+  <!-- ===== Bootstrap Bundle - כולל Popper לרכיבים אינטראקטיביים ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ===== מיכל ראשי ===== -->
+  <div id="container">
+
+    <!-- ===== תפריט ניווט עליון ===== -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <!-- לוגו ארגון -->
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.jpeg" alt="logo" class="nav-logo">
+      </a>
+
+      <!-- כפתור המבורגר למובייל -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- תפריט הניווט (מתקפל במובייל) -->
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">דף הבית</a>
+          <a class="nav-link" href="#">אודות</a>
+          <a class="nav-link" href="#">תמיכה וליווי</a>
+          <a class="nav-link" href="#">זכויות ומידע</a>
+          <a class="nav-link" href="#">לשאלון</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== תוכן ראשי של העמוד ===== -->
+    <main>
+
+      <!-- ===== כותרת ראשית ===== -->
+      <header class="page-header">
+        <h1>אחת מתשע</h1>
+        <h2>מעכשיו את לא לבד - אנחנו איתך</h2>
+        <p>
+          אנחנו יודעות שאם היית יכולה, לא בהכרח היית מגיעה לכאן. ובכל זאת, טוב שהגעת.
+        </p>
+      </header>
+
+      <!-- ===== אזור חיפוש וכרטיסיות ===== -->
+      <div class="search-and-cards-wrapper">
+
+        <!-- אזור החיפוש -->
+        <section class="search-section text-center my-4">
+          <label for="searchInput">חיפוש לפי נושא:</label>
+          <input type="text" id="searchInput" placeholder="כתבו כאן">
+          <button id="searchBtn" type="button" class="btn btn-dark btn-sm">חיפוש</button>
+        </section>
+
+        <!-- ===== כרטיסיות יחידות התוכן (7 יחידות) ===== -->
+        <section class="cards-section">
+          <div class="container">
+            <!-- שימוש ב-Bootstrap Grid עם רווחים (g-4) -->
+            <div class="row g-4">
+
+              <!-- כרטיסייה 1 - הזכויות שלך -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100">
+                  <img src="images/rights.png" class="card-img-top" alt="זכויות">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">הזכויות שלך</h5>
+                    <p class="card-text">זכויות רפואיות, סוציאליות וכלים</p>
+                    <a href="#" class="btn btn-outline-dark">למידע נוסף</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- כרטיסייה 2 - ביחד -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100">
+                  <img src="images/aboutus.png" class="card-img-top" alt="ביחד">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">ביחד</h5>
+                    <p class="card-text">תמיכה קהילתית ומפגשים</p>
+                    <a href="#" class="btn btn-outline-dark">הצטרפי</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- כרטיסייה 3 - תמיכה למשפחה -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100">
+                  <img src="images/handstogether.png" class="card-img-top" alt="תמיכה">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">תמיכה למשפחה</h5>
+                    <p class="card-text">מדריך קצר למשפחה תומכת</p>
+                    <a href="#" class="btn btn-outline-dark">פרטים</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- כרטיסייה 4 - האבחון -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100">
+                  <img src="images/help.png" class="card-img-top" alt="אבחון">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">האבחון</h5>
+                    <p class="card-text">מה קורה מרגע קבלת הבשורה</p>
+                    <a href="#" class="btn btn-outline-dark">לצפייה</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- כרטיסייה 5 - התנדבות -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100">
+                  <img src="images/hug.png" class="card-img-top" alt="התנדבות">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">התנדבות</h5>
+                    <p class="card-text">הצטרפי לצוות שלנו</p>
+                    <a href="#" class="btn btn-outline-dark">למידע נוסף</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- כרטיסייה 6 - ליווי רגשי -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100">
+                  <img src="images/mentalhelp.png" class="card-img-top" alt="עזרה נפשית">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">ליווי רגשי</h5>
+                    <p class="card-text">מתנדבות, קבוצות תמיכה ושירותי ייעוץ</p>
+                    <a href="#" class="btn btn-outline-dark">צרי קשר</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- כרטיסייה 7 - התמודדות ביום יום -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100">
+                  <img src="images/symbol.png" class="card-img-top" alt="התמודדות">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">התמודדות ביום יום</h5>
+                    <p class="card-text">טיפים לשגרה בריאה</p>
+                    <a href="#" class="btn btn-outline-dark">קראי עוד</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ===== שאלון משוב למשתמשת ===== -->
+  <section id="survey" class="py-5">
+    <div class="container">
+      <div class="survey-wrapper mx-auto text-center">
+
+        <!-- כותרת השאלון -->
+        <header class="mb-5">
+          <h2 class="survey-title">עזרי לנו לעזור לך</h2>
+          <p class="survey-subtitle">
+            השאלון נועד לסייע לנו להבין טוב יותר את הצרכים שלך ולדייק את המידע והתמיכה עבורך.
+          </p>
+          <p class="required-note">* כל השדות חובה</p>
+        </header>
+
+        <!-- טופס השאלון (novalidate = אימות מותאם אישית ב-JS) -->
+        <form id="survey-form" novalidate>
+
+          <!-- ===== שאלה 1 - טקסט פתוח ===== -->
+          <article class="survey-question">
+            <h3 class="survey-question-title">
+              מה הדבר שהכי חשוב לך לקבל בתקופה הזו?
+              <span class="required">*</span>
+            </h3>
+
+            <!-- שדה טקסט חופשי -->
+            <textarea id="q1" name="q1" class="form-control" rows="4" placeholder="כתבי כאן..."></textarea>
+
+            <!-- הודעת שגיאה (מוסתרת כברירת מחדל) -->
+            <p id="q1-error" class="error-text" style="display:none;">
+              * יש להזין לפחות 10 תווים
+            </p>
+          </article>
+
+          <!-- ===== שאלה 2 - חד-ברירה (רדיו) ===== -->
+          <article class="survey-question">
+            <h3 class="survey-question-title">
+              באיזה שלב את נמצאת בהתמודדות עם סרטן השד?
+              <span class="required">*</span>
+            </h3>
+
+            <div class="survey-options">
+              <!-- אפשרויות בחירה -->
+              <label class="survey-option">
+                <input type="radio" name="q2" value="before">
+                לפני אבחון / בבירור
+              </label>
+
+              <label class="survey-option">
+                <input type="radio" name="q2" value="after-diagnosis">
+                לאחר אבחון, לפני תחילת טיפולים
+              </label>
+
+              <label class="survey-option">
+                <input type="radio" name="q2" value="during-treatment">
+                במהלך טיפולים
+              </label>
+
+              <label class="survey-option">
+                <input type="radio" name="q2" value="after-treatment">
+                לאחר סיום טיפולים
+              </label>
+
+              <label class="survey-option">
+                <input type="radio" name="q2" value="family">
+                מלווה בת משפחה / חברה
+              </label>
+            </div>
+
+            <!-- הודעת שגיאה -->
+            <p id="q2-error" class="error-text" style="display:none;">
+              * יש לבחור אפשרות אחת
+            </p>
+          </article>
+
+          <!-- ===== שאלה 3 - רב-ברירה (צ'קבוקס) ===== -->
+          <article class="survey-question">
+            <h3 class="survey-question-title">
+              באילו תחומים היית שמחה לקבל ליווי או מידע נוסף?
+              <span class="required">*</span>
+            </h3>
+
+            <div class="survey-options">
+              <!-- אפשרויות בחירה מרובה -->
+              <label class="survey-option">
+                <input type="checkbox" name="q3">
+                מידע רפואי והבנת התהליך
+              </label>
+
+              <label class="survey-option">
+                <input type="checkbox" name="q3">
+                ליווי רגשי ותמיכה נפשית
+              </label>
+
+              <label class="survey-option">
+                <input type="checkbox" name="q3">
+                זכויות רפואיות וסוציאליות
+              </label>
+
+              <label class="survey-option">
+                <input type="checkbox" name="q3">
+                קבוצות תמיכה ומפגשים
+              </label>
+
+              <label class="survey-option">
+                <input type="checkbox" name="q3">
+                חזרה לשגרה לאחר טיפולים
+              </label>
+            </div>
+
+            <!-- הודעת שגיאה -->
+            <p class="error-text" id="q3-error">
+              * יש לבחור לפחות תחום אחד
+            </p>
+          </article>
+
+          <!-- ===== כפתורי פעולה ===== -->
+          <div class="survey-actions">
+            <!-- שליחת הטופס -->
+            <button type="submit" class="survey-btn primary">שליחה</button>
+            <!-- איפוס הטופס -->
+            <button type="reset" class="survey-btn secondary">ניקוי טופס</button>
+          </div>
+
+          <!-- הודעת שגיאה כללית (מוסתרת כברירת מחדל) -->
+          <p id="form-error-message" class="error-text text-center">
+            יש להשלים את כל השדות החובה לפני שליחת הטופס
+          </p>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== פופאפ אישור לאחר שליחת הטופס ===== -->
+  <div id="surveyModal" class="modal-overlay">
+    <div class="modal-content">
+      <!-- כפתור סגירה -->
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+
+      <!-- תוכן ההודעה (מוזרק דינמית ב-JS) -->
+      <div class="modal-body">
+        <p id="modal-message"></p>
+      </div>
+
+      <!-- כפתור אישור -->
+      <div class="modal-footer">
+        <button class="modal-btn" onclick="closeModal()">סגירה</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
